@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: url("img/loading/02.png");
+  background-size: 107%;
+  background-repeat: no-repeat; */
+  max-width: 1920px;
+  max-height: 1080px;
+  overflow-y: hidden;
+
+}
+@font-face {
+  font-family: bold;
+  src: url("font/CookieRun\ Bold.otf");
+}
+.logo{
+  width: 230px;
+  margin: 50px;
+}
+.loading-bar-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.loading-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.loading-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #FEBC2A;
+  animation: loading-bar-fill 4s linear forwards;
+  border-top: 1.5px solid #333;
+}
+
+.loading-bar-text {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 730px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  z-index: 1;
+  font-family: 'bold';
+}
+
+.start-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 34px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'bold';
+  animation: blink 0.8s linear 0.1s forwards;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+.hidden {
+  display: none;
+}
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes loading-bar-fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.none{
+  all: unset;
+}
